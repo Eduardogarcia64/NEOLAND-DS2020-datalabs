@@ -1,0 +1,23 @@
+import random
+
+#declare variables
+value = random.randint(1,10)
+count = 0
+guess = 0
+
+# create the iteratrion
+
+while guess != value:
+    count += 1 #incremento
+    guess = input('Guess a number between 1 and 6: ')
+    if guess.isnumeric():
+        guess = int(guess)
+        if guess > value:
+            print('Value too high. Please, try again')
+        elif guess < value:
+            print('Value too small. Try again')
+    elif guess.isalpha():
+        print('Please, enter a number')
+else:
+    print('you have guessed in {} tries'.format(count))
+    
