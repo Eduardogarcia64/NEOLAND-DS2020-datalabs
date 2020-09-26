@@ -13,11 +13,18 @@ while guess != value:
     if guess.isnumeric():
         guess = int(guess)
         if guess > value:
+            print('You have guessed:' + str(guess))
+            print('Number of tries: {}'.format(count))
             print('Value too high. Please, try again')
         elif guess < value:
+            print('You have guessed:' + str(guess))
+            print('Number of tries: {}'.format(count))
             print('Value too small. Try again')
+        elif guess == value:
+            print('You have chosen wisely!!')
     elif guess.isalpha():
+        print('You have guessed:' + str(guess))
+        print('Number of tries: {}'.format(count))
         print('Please, enter a number')
 else:
     print('you have guessed in {} tries'.format(count))
-    
